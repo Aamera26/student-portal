@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Student Portal</title>
+<style>
+
+body{
+font-family:Arial;
+background:#f2f2f2;
+text-align:center;
+padding:50px;
+}
+
+.box{
+background:white;
+padding:30px;
+width:400px;
+margin:auto;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+input{
+padding:10px;
+width:80%;
+margin-top:10px;
+}
+
+button{
+padding:10px 20px;
+margin-top:10px;
+background:#2b7cff;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Student Portal</h2>
+
+<input type="text" id="roll" placeholder="Enter Roll Number">
+
+<br>
+
+<button onclick="search()">Check Result</button>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+
+function search(){
+
+let roll=document.getElementById("roll").value;
+
+fetch("PASTE_YOUR_SCRIPT_URL?roll="+roll)
+
+.then(res=>res.json())
+
+.then(data=>{
+
+document.getElementById("result").innerHTML=
+
+"<h3>"+data.student[1]+"</h3>"+
+"Batch: "+data.student[2]+"<br><br>"+
+
+"<b>Result</b><br>"+
+"Physics: "+data.result[1]+"<br>"+
+"Chemistry: "+data.result[2]+"<br>"+
+"Maths: "+data.result[3]+"<br>";
+
+})
+
+}
+
+</script>
+
+</body>
+</html>
