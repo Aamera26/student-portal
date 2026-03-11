@@ -3,6 +3,7 @@
 
 <head>
 <title>Student Portal</title>
+
 <style>
 
 body{
@@ -37,6 +38,7 @@ cursor:pointer;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -47,9 +49,11 @@ cursor:pointer;
 
 <input type="text" id="roll" placeholder="Enter Roll Number">
 
-<br>
+<br><br>
 
 <button onclick="search()">Check Result</button>
+
+<br><br>
 
 <div id="result"></div>
 
@@ -75,7 +79,7 @@ document.getElementById("result").innerHTML=
 "<b>Result</b><br>"+
 "Physics: "+data.result[1]+"<br>"+
 "Chemistry: "+data.result[2]+"<br>"+
-"Maths: "+data.result[3]+"<br>";
+"Maths: "+data.result[3];
 
 })
 
