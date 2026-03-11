@@ -61,7 +61,7 @@ function search(){
 
 let roll=document.getElementById("roll").value;
 
-fetch("https://script.google.com/macros/s/AKfycbznevV5BqDEO3rTgPua1FFOHyRMgAhZX3eiEokYjX4O_2dxGJrSMnxtrVHlKiYgU1vh/exec="+roll)
+fetch("https://script.google.com/macros/s/AKfycbznevV5BqDEO3rTgPua1FFOHyRMgAhZX3eiEokYjX4O_2dxGJrSMnxtrVHlKiYgU1vh/exec?roll="+roll)
 
 .then(res=>res.json())
 
